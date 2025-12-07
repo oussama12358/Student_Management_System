@@ -1,21 +1,19 @@
 # IDE
-.idea/
-*.iml
-*.iws
-*.ipr
+# Note: .idea and .iml files were previously ignored. You requested these to be tracked,
+# so the most common ignore patterns for IDE files were removed.
 .vscode/
 *.swp
 *.swo
 
 # Build
-out/
+# Note: `out/` is no longer ignored to allow pushing build output if you want.
 target/
 bin/
 *.class
 *.jar
 
 # Dependencies
-lib/
+# Note: `lib/` is no longer ignored so local libraries can be pushed.
 
 # Configuration files with sensitive data
 config.properties
