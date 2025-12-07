@@ -1,3 +1,8 @@
+# =========================
+# Repository ignore rules
+# - Keep local IDE files and build output out of the remote repository
+# - Keep local sensitive configuration files (config.properties) out of version control
+# =========================
 # IDE
 .idea/
 *.iml

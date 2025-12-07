@@ -40,16 +40,18 @@ Author
 - Oussama Sghir
 
 Repository files excluded from GitHub
-- The `.idea/` directory (IntelliJ settings) and the `out/` build output are excluded from the repository
-  and listed in `.gitignore`. These files are local to your machine and should not be committed.
-  This keeps IDE-specific and generated files out of the remote repository.
+- The following are ignored by `.gitignore` and should remain local:
+  - `.idea/` — IntelliJ project settings (IDE-specific)
+  - `out/` — build output
+  - `src/main/resources/config.properties` — local, sensitive configuration
 
-If you want to stop tracking these now (recommended when they are already tracked), run:
+If any of these were previously committed and you want to remove them from the repository while keeping them locally, run these commands in the project root:
 
 ```powershell
 git rm -r --cached .idea
 git rm -r --cached out
+git rm --cached src/main/resources/config.properties
 git add .gitignore Readme.md
-git commit -m "Remove .idea and out from repository; update .gitignore and README"
+git commit -m "Remove local IDE/build/config files from repo and update .gitignore/README"
 git push origin main
 ```
