@@ -7,6 +7,24 @@ Includes database creation, student table setup, and CRUD operations (Create, Re
 - Connect to MySQL database using JDBC
 - Automatic database and table initialization
 - Manage students: name, email, major, GPA, and enrollment date
+  
+
+
+
+
+
+
+<img width="1227" height="738" alt="image" src="https://github.com/user-attachments/assets/52d82a07-c712-4540-8957-ccecaf03ed80" />
+
+
+
+
+
+
+
+
+
+
 
 ## Getting Started
 
