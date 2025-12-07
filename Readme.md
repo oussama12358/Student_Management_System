@@ -4,6 +4,9 @@ Short description
 - A simple Java desktop application to manage student records using a MySQL database.
 - Includes database initialization, a Student DAO, validation, and a Swing GUI.
 
+<img width="1230" height="738" alt="image" src="https://github.com/user-attachments/assets/18b243fe-59e0-4252-86eb-0cbce9977d8f" />
+
+
 Important: sensitive configuration
 - Do NOT upload sensitive configuration to GitHub. Keep a local `config.properties` out of the repository.
 - This project contains an example file: `src/main/resources/config.example.properties`.
@@ -15,8 +18,6 @@ db.url=jdbc:mysql://localhost:3306/student_db
 db.user=YOUR_DB_USER
 db.password=YOUR_DB_PASSWORD
 ```
-
-Make sure `src/main/resources/config.properties` is listed in `.gitignore` so it will not be committed.
 
 Dependencies
 - The project uses MySQL Connector/J: `lib/mysql-connector-j-8.0.33.jar`.
@@ -30,11 +31,6 @@ Running in IntelliJ
 4. If IntelliJ does not detect the MySQL connector automatically, add it: `File  Project Structure  Libraries  +  Java` and select `lib/mysql-connector-j-8.0.33.jar`.
 5. Create the local config file by copying `config.example.properties` to `config.properties` and updating the values.
 6. Run the application: right-click `src/view/Main.java`  `Run 'Main'`. The application will attempt to initialize the database using the `config.properties` values.
-
-Notes and best practices
-- Keep `config.properties` local and excluded by `.gitignore`.
-- Prefer using a dependency manager (Maven/Gradle) instead of checking large JARs into the repo.
-- It's uncommon to commit `out/` (build output) or IDE settings (`.idea/`, `*.iml`) unless you intend to share project-level IDE configuration.
 
 Author
 - Oussama Sghir
