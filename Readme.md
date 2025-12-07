@@ -38,18 +38,3 @@ Notes and best practices
 
 Author
 - Oussama Sghir
-
-Repository files excluded from GitHub
-- The `.idea/` directory (IntelliJ settings) and the `out/` build output are excluded from the repository
-  and listed in `.gitignore`. These files are local to your machine and should not be committed.
-  This keeps IDE-specific and generated files out of the remote repository.
-
-If you want to stop tracking these now (recommended when they are already tracked), run:
-
-```powershell
-git rm -r --cached .idea
-git rm -r --cached out
-git add .gitignore Readme.md
-git commit -m "Remove .idea and out from repository; update .gitignore and README"
-git push origin main
-```
