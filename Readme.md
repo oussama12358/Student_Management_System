@@ -1,7 +1,8 @@
 ﻿# Student Management System
 
 Short description
- 
+- A simple Java desktop application to manage student records using a MySQL database.
+- Includes database initialization, a Student DAO, validation, and a Swing GUI.
 
 Running in IntelliJ
 - Do NOT upload sensitive configuration to GitHub. Keep a local `config.properties` out of the repository.
