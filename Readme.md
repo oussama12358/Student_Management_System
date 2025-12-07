@@ -16,8 +16,6 @@ db.user=YOUR_DB_USER
 db.password=YOUR_DB_PASSWORD
 ```
 
-Make sure `src/main/resources/config.properties` is listed in `.gitignore` so it will not be committed.
-
 Dependencies
 - The project uses MySQL Connector/J: `lib/mysql-connector-j-8.0.33.jar`.
 - You can either keep the JAR under `lib/` (already present) or use a dependency manager such as Maven/Gradle.
@@ -30,10 +28,6 @@ Running in IntelliJ
 4. If IntelliJ does not detect the MySQL connector automatically, add it: `File  Project Structure  Libraries  +  Java` and select `lib/mysql-connector-j-8.0.33.jar`.
 5. Create the local config file by copying `config.example.properties` to `config.properties` and updating the values.
 6. Run the application: right-click `src/view/Main.java`  `Run 'Main'`. The application will attempt to initialize the database using the `config.properties` values.
-
-Notes and best practices
-- Keep `config.properties` local and excluded by `.gitignore`.
-- Prefer using a dependency manager (Maven/Gradle) instead of checking large JARs into the repo.
 
 Author
 - Oussama Sghir
