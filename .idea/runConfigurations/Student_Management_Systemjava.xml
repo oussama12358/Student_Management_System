@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Student_Management_Systemjava" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="view.Main" />
+    <module name="Student_Management_System" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

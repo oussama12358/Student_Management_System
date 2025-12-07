@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name>openjdk-25</name>
+      <type>JavaSDK</type>
+      <version>25</version>
+      <homePath>C:\Program Files\Eclipse Adoptium\jdk-25.0.1.8-hotspot</homePath>
+    </jdk>
+  </component>
+</application>
