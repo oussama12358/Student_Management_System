@@ -1,57 +1,40 @@
-# Student Management System
+﻿# Student Management System
 
-A Java project for managing student data using a MySQL database.
-Includes database creation, student table setup, and CRUD operations (Create, Read, Update, Delete).
+Short description
+- A simple Java desktop application to manage student records using a MySQL database.
+- Includes database initialization, a Student DAO, validation, and a Swing GUI.
 
-## Features
-- Connect to MySQL database using JDBC
-- Automatic database and table initialization
-- Manage students: name, email, major, GPA, and enrollment date
-  
+Important: sensitive configuration
+- Do NOT upload sensitive configuration to GitHub. Keep a local `config.properties` out of the repository.
+- This project contains an example file: `src/main/resources/config.example.properties`.
+  - Create a local configuration file from the example and fill your credentials:
 
+```properties
+# copy this file to `src/main/resources/config.properties` and fill values
+db.url=jdbc:mysql://localhost:3306/student_db
+db.user=YOUR_DB_USER
+db.password=YOUR_DB_PASSWORD
+```
 
+Make sure `src/main/resources/config.properties` is listed in `.gitignore` so it will not be committed.
 
+Dependencies
+- The project uses MySQL Connector/J: `lib/mysql-connector-j-8.0.33.jar`.
+- You can either keep the JAR under `lib/` (already present) or use a dependency manager such as Maven/Gradle.
 
+Running in IntelliJ
 
+1. Open the project folder in IntelliJ: `File  Open` and select the project root.
+2. Mark `src` as Sources Root: right-click `src`  `Mark Directory as`  `Sources Root`.
+3. Set the Project SDK to a valid JDK (11 or 17): `File  Project Structure  Project`  `Project SDK`.
+4. If IntelliJ does not detect the MySQL connector automatically, add it: `File  Project Structure  Libraries  +  Java` and select `lib/mysql-connector-j-8.0.33.jar`.
+5. Create the local config file by copying `config.example.properties` to `config.properties` and updating the values.
+6. Run the application: right-click `src/view/Main.java`  `Run 'Main'`. The application will attempt to initialize the database using the `config.properties` values.
 
-<img width="1227" height="738" alt="image" src="https://github.com/user-attachments/assets/52d82a07-c712-4540-8957-ccecaf03ed80" />
+Notes and best practices
+- Keep `config.properties` local and excluded by `.gitignore`.
+- Prefer using a dependency manager (Maven/Gradle) instead of checking large JARs into the repo.
+- It's uncommon to commit `out/` (build output) or IDE settings (`.idea/`, `*.iml`) unless you intend to share project-level IDE configuration.
 
-
-
-
-
-
-
-
-
-
-
-## Getting Started
-
-1. The project expects a `config.properties` file to be present on the classpath (recommended in `src/main/resources`) or in the project root (this file should **not** be uploaded to GitHub).
-
-	 - A `config.properties` file with default values has been included in `src/main/resources` for convenience. Update the values to match your local MySQL installation if needed:
-
-	 ```properties
-	 db.url=jdbc:mysql://localhost:3306/student_db
-	 db.user=root
-	 db.password=YOUR_PASSWORD
-	 ```
-
-2. Run `DatabaseConnection.initializeDatabase()` (the GUI calls it automatically on startup) to initialize the database and tables.
-3. Use the classes in the `src/` folder to perform CRUD operations on students.
-
-## Notes
-- Make sure `config.properties` is listed in `.gitignore` to prevent sensitive data from being uploaded to GitHub.
-- The project uses the MySQL Connector/J library (`lib/mysql-connector-j-8.0.33`), which is also ignored by Git.
-
-## Running in IntelliJ
-
-- Open the project directory in IntelliJ (`File → Open` → select project root).
-- Make sure the `src` folder is marked as `Sources Root` (right-click `src` → `Mark Directory as → Sources Root`).
-- Set the Project SDK to a valid JDK (11 or 17) under `File → Project Structure → Project`.
-- Add the MySQL connector jar as a library if IntelliJ doesn't pick it automatically: `File → Project Structure → Libraries → + → Java → select lib/mysql-connector-j-8.0.33.jar`.
-- Run the `view.Main` class (right-click `Main.java` → Run) — the app will attempt to initialize the database using `config.properties`.
-
-## Author
-Oussama Sghir
+Author
+- Oussama Sghir
