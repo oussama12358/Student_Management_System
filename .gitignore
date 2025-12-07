@@ -1,0 +1,35 @@
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# Build
+out/
+target/
+bin/
+*.class
+*.jar
+
+# Dependencies
+lib/
+
+# Configuration files with sensitive data
+config.properties
+*.env
+*.local
+credentials.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Compiled output
+*.com
+*.exe
