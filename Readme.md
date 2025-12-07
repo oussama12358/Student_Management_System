@@ -34,24 +34,6 @@ Running in IntelliJ
 Notes and best practices
 - Keep `config.properties` local and excluded by `.gitignore`.
 - Prefer using a dependency manager (Maven/Gradle) instead of checking large JARs into the repo.
-- It's uncommon to commit `out/` (build output) or IDE settings (`.idea/`, `*.iml`) unless you intend to share project-level IDE configuration.
 
 Author
 - Oussama Sghir
-
-Repository files excluded from GitHub
-- The following are ignored by `.gitignore` and should remain local:
-  - `.idea/` — IntelliJ project settings (IDE-specific)
-  - `out/` — build output
-  - `src/main/resources/config.properties` — local, sensitive configuration
-
-If any of these were previously committed and you want to remove them from the repository while keeping them locally, run these commands in the project root:
-
-```powershell
-git rm -r --cached .idea
-git rm -r --cached out
-git rm --cached src/main/resources/config.properties
-git add .gitignore Readme.md
-git commit -m "Remove local IDE/build/config files from repo and update .gitignore/README"
-git push origin main
-```

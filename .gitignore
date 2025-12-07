@@ -19,9 +19,6 @@ bin/
 *.class
 *.jar
 
-# Dependencies
-lib/
-
 # Configuration files with sensitive data
 src/main/resources/config.properties
 config.properties
